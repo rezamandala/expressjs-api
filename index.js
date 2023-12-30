@@ -25,11 +25,11 @@ db.mongoose.connect(db.url, mongooseConfig)
         process.exit();
     });
 
-app.use(express.static('public'))
+    app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-})
+    app.get('/', (req, res) => {
+        res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+    })
 
 require("./app/routes/items.route")(app);
 
