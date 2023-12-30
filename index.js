@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./app/models");
 const app = express();
+const path = require('path');
 
 const corsOptions = {
     origin: "*"
